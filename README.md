@@ -14,8 +14,9 @@ to ensure the root logger has a handler.
 
 For importable library, the situation is completely different. It is
 officially recommended that loggers should not have any handlers
-except `logging.NullHandler`. Logging should be configurable by end
-users through top level main script or application.
+except `logging.NullHandler`. Additionally, in our opinion, logging
+should be configurable by end users through top level main script or
+application.
 
 
 Here, we provide a set of small utility functions to help library
