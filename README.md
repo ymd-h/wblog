@@ -77,6 +77,41 @@ package or module. It removes its log level and all handlers from `name`,
 and enables delegation to the parent logger again.
 
 
+### 3.4 Advanced Usage
+wblog doesn't manage handlers and fomatters.
+End users or application need to prepare them.
+
+Handler defines how and where the logging messages are outputted.
+There are many handlers are implemented at the `logging` packages
+([ref1](https://docs.python.org/3/library/logging.handlers.html),
+[ref2](https://docs.python.org/3/howto/logging.html#useful-handlers)).
+
+- `StreamHandler` writes logs to stream (e.g. srandard error).
+- `FileHandler` writes logs to a file.
+- `RotatingFileHandler` writes logs to a file with log rotation.
+- etc.
+
+
+`logging.Handler` class can set log level and filter, so that it is
+also possible that all logs are shown on the console standard error
+and only logs over `logging.WARNING` are written on the log file.
+
+If you set only a single handler to your logger, we recommend not to
+specify log level at the handler, then the handler manages all logs
+from the logger.
+
+
+Formatter defines logging format
+([ref](https://docs.python.org/3/library/logging.html#formatter-objects))
+and is set to handlers.
+
+The default format is `%(levelname)s:%(name)s:%(message)s` which
+doesn't include date time information at all.
+
+Information can be used are described
+[here](https://docs.python.org/3/library/logging.html#logrecord-attributes).
+
+
 ## 4. Design
 
 ```
