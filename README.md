@@ -24,6 +24,8 @@ developpers realize well-behaved logging.
 
 
 ## Install
+wblog doesn't have any dependencies.
+
 
 ```bash
 pip install wblog
