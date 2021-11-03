@@ -28,7 +28,7 @@ wblog doesn't have any dependencies.
 
 
 ```bash
-pip install wblog
+pip install well-behaved-logging
 ```
 
 ## Usage
