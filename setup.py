@@ -1,5 +1,9 @@
 from setuptools import setup, find_packages
+import os
 
+README = os.path.join(os.path.abspath(os.path.dirname(__file__)),'README.md')
+with open(README,encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(name="well-behaved-logging",
       author="Yamada Hiroyuki",
@@ -11,4 +15,6 @@ setup(name="well-behaved-logging",
                    "Operating System :: OS Independent",
                    "Development Status :: 4 - Beta",
                    "Intended Audience :: Developers",
-                   "Topic :: Software Development :: Libraries"])
+                   "Topic :: Software Development :: Libraries"],
+      long_description=long_description,
+      long_description_content_type = "text/markdown")
