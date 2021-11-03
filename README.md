@@ -56,7 +56,7 @@ set log level and to add handlers manually, however, it is not
 recommended.
 
 
-### Start Logging
+### Start Logging (by End Users or Application)
 `wblog.start_logging(name, level=None, *, handlers=None, propagate=False)`
 function enables logging of a specified package or module
 (as long as they are well behaved).
@@ -71,7 +71,7 @@ We assume the module logger doesn't have any handlers except `logging.NullLogger
 and the function doesn't remove handlers.
 
 
-### Stop Logging
+### Stop Logging (by End Users or Application)
 `wblog.stop_logging(name)` function disables logging of a specified
 package or module. It removes its log level and all handlers from `name`,
 and enables delegation to the parent logger again.
