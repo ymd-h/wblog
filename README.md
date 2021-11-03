@@ -1,6 +1,6 @@
 # Well-Bahaved Logging (wblog)
 
-## Overview
+## 1. Overview
 
 Python standard `logging` package has great functionalities, however,
 it is bit confusing.
@@ -23,7 +23,7 @@ Here, we provide a set of small utility functions to help library
 developpers realize well-behaved logging.
 
 
-## Install
+## 2. Install
 wblog doesn't have any dependencies.
 
 
@@ -31,9 +31,9 @@ wblog doesn't have any dependencies.
 pip install well-behaved-logging
 ```
 
-## Usage
+## 3. Usage
 
-### Get and Use Logger at Module
+### 3.1 Get and Use Logger at Module
 You can get module-level prepared `logging.Logger` instance by
 `wblog.getLogger()` function. The function automatically detects the
 module name (aka. `__name__`), so that you don't need to pass it.
@@ -56,7 +56,7 @@ set log level and to add handlers manually, however, it is not
 recommended.
 
 
-### Start Logging (by End Users or Application)
+### 3.2 Start Logging (by End Users or Application)
 `wblog.start_logging(name, level=None, *, handlers=None, propagate=False)`
 function enables logging of a specified package or module
 (as long as they are well behaved).
@@ -71,13 +71,13 @@ We assume the module logger doesn't have any handlers except `logging.NullLogger
 and the function doesn't remove handlers.
 
 
-### Stop Logging (by End Users or Application)
+### 3.3 Stop Logging (by End Users or Application)
 `wblog.stop_logging(name)` function disables logging of a specified
 package or module. It removes its log level and all handlers from `name`,
 and enables delegation to the parent logger again.
 
 
-## Design
+## 4. Design
 
 ```
 root logger <-- package top-level logger <-- ... <-- module logger
