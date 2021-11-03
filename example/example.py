@@ -185,4 +185,3 @@ sublogger3.subsublogger2.debug("sublogger3.subsublogger2.debug")
 sublogger3.subsublogger2.info("sublogger3.subsublogger2.info")
 sublogger3.subsublogger2.warning("sublogger3.subsublogger2.warning")
 
-
