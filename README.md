@@ -131,7 +131,7 @@ to its parent logger can be stopped, but it is better if it is
 configurable.
 
 Disabling such logging reverts to the original log level
-(`logging.NOTSET`), removes all handlers, and enable delegation again.
+(`logging.NOTSET`), removes all handlers, and enables delegation again.
 
 
 ## 5. Other Logging Libraries
