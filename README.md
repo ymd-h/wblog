@@ -97,3 +97,18 @@ configurable.
 
 Disabling such logging reverts to the original log level
 (`logging.NOTSET`), removes all handlers, and enable delegation again.
+
+
+## 5. Other Logging Libraries
+
+There are many logging libraries. As far as we know, they are designed
+for end users to log easily.
+
+- [logzero](https://github.com/metachris/logzero)
+  - Easy to setup `Logger`, `Handler`, and `Formatter`
+	- Built on the standard `logging` package
+  - For end users or application, not for library
+- [Loguru](https://github.com/Delgan/loguru)
+  - Easy to logging
+	- Built from scratch
+  - For end users or application, not for library
