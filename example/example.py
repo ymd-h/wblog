@@ -4,6 +4,15 @@
 # at top level script, however, it is not designed use case.
 # Each logger is designed to call inside their module.
 #
+# Package / Module Structure:
+#   + -- example.py
+#   + -- sublogger1.py
+#   + -- sublogger2.py
+#   + -- sublogger3/
+#        + -- __init__.py
+#        + -- subsublogger1.py
+#        + -- subsublogger2.py
+#
 # Notes:
 #   We intentionally use print function to distinguish from logging functions.
 #
