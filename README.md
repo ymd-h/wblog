@@ -33,20 +33,23 @@ pip install wblog
 
 ## Usage
 
-### Get Logger at module
+### Get and Use Logger at Module
 You can get module-level prepared `logging.Logger` instance by
 `wblog.getLogger()` function. The function automatically detects the
 module name (aka. `__name__`), so that you don't need to pass it.
+
+
+The returned logger is standard `logging.Logger`, so that you can call
+logging methods (e.g. `Logger.debug()`) as usual.
+
 
 ```python
 import wblog
 
 logger = wblog.getLogger() # No __name__ is needed
+
+logger.debug("Debug message")
 ```
-
-The returned logger is standard `logging.Logger`, so that you can call
-logging methods (e.g. `Logger.debug()`) as usual.
-
 
 Since the logger is standart `logging.Logger`, it is also possible to
 set log level and to add handlers manually, however, it is not
